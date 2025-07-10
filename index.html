@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>MinimalShop</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Sticky Header mit Navigation und Matter.js-Canvas -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#">Start</a></li>
+        <li><a href="#">Produkte</a></li>
+        <li><a href="#">Kontakt</a></li>
+      </ul>
+    </nav>
+    <div class="header-animation">
+      <!-- Matter.js Canvas wird hier per JS eingefügt -->
+      <canvas id="matter-canvas"></canvas>
+    </div>
+  </header>
+
+  <!-- Hero Section mit Hauptprodukt -->
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Minimalistische Eleganz<br>für deinen Alltag</h1>
+        <p>Entdecke ausgewählte Produkte mit zeitlosem Design und innovativer Technik.</p>
+        <a href="#" class="cta-btn">Jetzt entdecken</a>
+      </div>
+      <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=80" alt="Produktbild">
+      </div>
+    </section>
+  </main>
+
+  <!-- Fußzeile -->
+  <footer>
+    <div class="footer-content">
+      <span>&copy; 2025 MinimalShop</span>
+      <nav>
+        <a href="#">Impressum</a>
+        <a href="#">Datenschutz</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js" integrity="sha512-/cDk5EKeosFVJeFt3PcTJS3BM4tiTqcKoy0eZZ+j9RnBbTK1ZBOqVakiobP6KyHR+Y6z3n0JVpaz6RtWLpmj6g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="script.js"></script>
+</body>
+</html>

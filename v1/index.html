@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MinimalShop - Premium Products</title>
+    <meta name="description" content="Entdecken Sie unsere Premium-Produktkollektion mit minimalistischem Design">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Matter.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+    
+    <!-- Preload wichtige Ressourcen -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Sticky Header -->
+    <header class="header" id="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="#" aria-label="MinimalShop Homepage">MinimalShop</a>
+                </div>
+                
+                <ul class="nav-menu" id="nav-menu">
+                    <li class="nav-item">
+                        <a href="#products" class="nav-link">Produkte</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">Über uns</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">Kontakt</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#cart" class="nav-link cart-link" aria-label="Warenkorb">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="9" cy="21" r="1"></circle>
+                                <circle cx="20" cy="21" r="1"></circle>
+                                <path d="m1 1 4 4 2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+                
+                <button class="nav-toggle" id="nav-toggle" aria-label="Navigation öffnen">
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+        </nav>
+        
+        <!-- Matter.js Animation Container -->
+        <div class="animation-container">
+            <canvas id="matter-canvas"></canvas>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        Designed for
+                        <span class="hero-highlight">Perfection</span>
+                    </h1>
+                    <p class="hero-description">
+                        Entdecken Sie unsere sorgfältig kuratierte Kollektion von Premium-Produkten, 
+                        die Funktionalität und Ästhetik in perfekter Harmonie vereinen.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#products" class="btn btn-primary">Kollektion entdecken</a>
+                        <a href="#about" class="btn btn-secondary">Mehr erfahren</a>
+                    </div>
+                </div>
+                
+                <div class="hero-product">
+                    <div class="product-showcase">
+                        <img src="/placeholder.svg?height=400&width=400" 
+                             alt="Premium Smartphone" 
+                             class="product-image"
+                             loading="eager">
+                        <div class="product-glow"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section class="products" id="products">
+            <div class="section-container">
+                <header class="section-header">
+                    <h2 class="section-title">Unsere Produkte</h2>
+                    <p class="section-description">
+                        Jedes Produkt wird mit höchster Präzision und Liebe zum Detail gefertigt
+                    </p>
+                </header>
+                
+                <div class="products-grid">
+                    <article class="product-card">
+                        <div class="product-image-container">
+                            <img src="/placeholder.svg?height=300&width=300" 
+                                 alt="Premium Smartphone" 
+                                 class="product-card-image"
+                                 loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Premium Smartphone</h3>
+                            <p class="product-description">Revolutionäre Technologie in elegantem Design</p>
+                            <div class="product-price">€999</div>
+                            <button class="btn btn-outline">Details ansehen</button>
+                        </div>
+                    </article>
+                    
+                    <article class="product-card">
+                        <div class="product-image-container">
+                            <img src="/placeholder.svg?height=300&width=300" 
+                                 alt="Wireless Kopfhörer" 
+                                 class="product-card-image"
+                                 loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Wireless Kopfhörer</h3>
+                            <p class="product-description">Kristallklarer Sound, grenzenlose Freiheit</p>
+                            <div class="product-price">€299</div>
+                            <button class="btn btn-outline">Details ansehen</button>
+                        </div>
+                    </article>
+                    
+                    <article class="product-card">
+                        <div class="product-image-container">
+                            <img src="/placeholder.svg?height=300&width=300" 
+                                 alt="Smart Watch" 
+                                 class="product-card-image"
+                                 loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Smart Watch</h3>
+                            <p class="product-description">Ihr persönlicher Assistent am Handgelenk</p>
+                            <div class="product-price">€449</div>
+                            <button class="btn btn-outline">Details ansehen</button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about" id="about">
+            <div class="section-container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2 class="section-title">Perfektion in jedem Detail</h2>
+                        <p class="about-description">
+                            Seit über einem Jahrzehnt setzen wir Maßstäbe in Design und Innovation. 
+                            Unsere Philosophie basiert auf der Überzeugung, dass wahre Schönheit 
+                            in der Einfachheit liegt.
+                        </p>
+                        <div class="about-stats">
+                            <div class="stat">
+                                <div class="stat-number">10+</div>
+                                <div class="stat-label">Jahre Erfahrung</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">1M+</div>
+                                <div class="stat-label">Zufriedene Kunden</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">50+</div>
+                                <div class="stat-label">Auszeichnungen</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-image">
+                        <img src="/placeholder.svg?height=500&width=600" 
+                             alt="Unser Design-Studio" 
+                             loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">MinimalShop</h3>
+                    <p class="footer-description">
+                        Premium-Produkte für anspruchsvolle Menschen, 
+                        die Wert auf Design und Qualität legen.
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-heading">Produkte</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">Smartphones</a></li>
+                        <li><a href="#" class="footer-link">Audio</a></li>
+                        <li><a href="#" class="footer-link">Wearables</a></li>
+                        <li><a href="#" class="footer-link">Zubehör</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-heading">Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">Hilfe-Center</a></li>
+                        <li><a href="#" class="footer-link">Kontakt</a></li>
+                        <li><a href="#" class="footer-link">Garantie</a></li>
+                        <li><a href="#" class="footer-link">Reparatur</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-heading">Unternehmen</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">Über uns</a></li>
+                        <li><a href="#" class="footer-link">Karriere</a></li>
+                        <li><a href="#" class="footer-link">Presse</a></li>
+                        <li><a href="#" class="footer-link">Investoren</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <p>&copy; 2024 MinimalShop. Alle Rechte vorbehalten.</p>
+                    <div class="footer-legal-links">
+                        <a href="#" class="footer-link">Datenschutz</a>
+                        <a href="#" class="footer-link">AGB</a>
+                        <a href="#" class="footer-link">Impressum</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
